@@ -1,4 +1,9 @@
-// TODO make a reactive model (application state), pass it as prop to the components used
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "./index.css";
+
 import {createRoot} from "react-dom/client";
-const mountedApp= createRoot(document.getElementById('root'))
-mountedApp.render(<div>hello world!</div>);
+
+import { Root } from "./root";
+import { reactiveModel } from "./mobxReactiveModel";
+
+createRoot(document.getElementById('root')).render(<Root model={reactiveModel} />);
